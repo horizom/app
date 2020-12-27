@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'app.env' => 'production',
+    'app.env' => 'development',
 
     /*
     |--------------------------------------------------------------------------
@@ -52,9 +52,9 @@ return [
     |
     */
 
-    'app.base_path' => '/repo/horizom/horizom',
+    'app.base_path' => '',
 
-    'app.url' => 'http://localhost/repo/horizom/horizom',
+    'app.url' => 'http://localhost:8800',
 
     'app.asset_url' => null,
 
@@ -84,32 +84,9 @@ return [
 
     'app.locale' => 'en',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Cross-Origin Resource Sharing (CORS) Configuration
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure your settings for cross-origin resource sharing
-    | or "CORS". This determines what cross-origin operations may execute
-    | in web browsers. You are free to adjust these settings as needed.
-    |
-    | To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
-    |
-    */
+    'app.display_errors' => true,
 
-    'cors.paths' => ['api/*'],
+    'system.redirect.https' => false,
 
-    'cors.max_age' => 0,
-
-    'cors.exposed_headers' => [],
-
-    'cors.allowed_headers' => ['*'],
-
-    'cors.allowed_methods' => ['*'],
-
-    'cors.allowed_origins' => ['*'],
-
-    'cors.allowed_origins_patterns' => [],
-
-    'cors.supports_credentials' => false,
+    'system.redirect.www' => false,
 ];

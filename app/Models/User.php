@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,11 +19,4 @@ class User extends Model
      * @var array
      */
     protected $fillable = ['id', 'email', 'created_at'];
-
-    /**
-     * The connection name for the model.
-     *
-     * @var string
-     */
-    protected $connection = 'local';
 }

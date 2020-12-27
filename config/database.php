@@ -35,8 +35,8 @@ return [
 
         'local' => [
             'driver' => 'mysql',
-            'host' => 'DB_HOST', '127.0.0.1',
-            'port' => 'DB_PORT', '3306',
+            'host' => '127.0.0.1',
+            'port' => '3306',
             'database' => 'DB_DATABASE',
             'username' => 'DB_USERNAME',
             'password' => 'DB_PASSWORD',
@@ -47,8 +47,8 @@ return [
 
         'online' => [
             'driver' => 'mysql',
-            'host' => 'DB_HOST', '127.0.0.1',
-            'port' => 'DB_PORT', '3306',
+            'host' => '127.0.0.1',
+            'port' => '3306',
             'database' => 'DB_DATABASE',
             'username' => 'DB_USERNAME',
             'password' => 'DB_PASSWORD',

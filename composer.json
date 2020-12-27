@@ -2,7 +2,7 @@
   "name": "horizom/horizom",
   "description": "Light PHP framework",
   "type": "project",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "license": "MIT",
   "keywords": [
     "horizon", 
@@ -10,9 +10,14 @@
     "framework", 
     "php"
   ],
+  "homepage": "https://horizom.gitbook.io",
+  "authors": [{
+    "name": "Horizom Team",
+    "email": "horizom.team@gmail.com"
+  }],
   "require": {
-    "php": "^7.3.1",
-    "horizom/core": "^1.1.0"
+    "php": "^7.4 || ^8.0",
+    "horizom/core": "^2.0.0"
   },
   "require-dev": {
     "digitalnature/php-ref": "^1.3"
@@ -22,6 +27,9 @@
       "App\\": "app/"
     }
   },
-  "minimum-stability": "dev",
+  "scripts": {
+    "start": "php -S localhost:8000 -t public"
+  },
+  "minimum-stability": "stable",
   "prefer-stable": true
 }
