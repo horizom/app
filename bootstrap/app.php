@@ -66,18 +66,6 @@ $app->setErrorHandler(\App\Middlewares\ErrorHandlerMiddleware::class);
 
 /*
 |--------------------------------------------------------------------------
-| Using Eloquent
-|--------------------------------------------------------------------------
-|
-| You can use a database ORM such as Eloquent to connect 
-| your Horizom application to a database.
-|
-*/
-
-// $app->withEloquent();
-
-/*
-|--------------------------------------------------------------------------
 | Register Middleware dependencies
 |--------------------------------------------------------------------------
 |

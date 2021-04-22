@@ -1,8 +1,8 @@
 {
-  "name": "horizom/horizom",
-  "description": "Light PHP framework",
+  "name": "horizom/framework",
+  "description": "A light PHP Framework",
   "type": "project",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "license": "MIT",
   "keywords": [
     "horizon", 
@@ -10,14 +10,14 @@
     "framework", 
     "php"
   ],
-  "homepage": "https://horizom.gitbook.io",
+  "homepage": "https://horizom.github.io",
   "authors": [{
     "name": "Horizom Team",
     "email": "horizom.team@gmail.com"
   }],
   "require": {
     "php": "^7.4 || ^8.0",
-    "horizom/core": "^2.1.0"
+    "horizom/core": "^2.1.2"
   },
   "require-dev": {
     "digitalnature/php-ref": "^1.3"
