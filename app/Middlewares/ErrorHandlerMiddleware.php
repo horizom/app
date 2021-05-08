@@ -3,16 +3,15 @@
 namespace App\Middlewares;
 
 use Throwable;
-use Horizom\Interfaces\ErrorHandlerInterface;
+use Horizom\Error\ErrorHandlerInterface;
 use Horizom\Exception\MethodNotAllowedException;
 use Horizom\Exception\NotFoundException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Psr\Http\Server\RequestHandlerInterface;
 
 class ErrorHandlerMiddleware implements ErrorHandlerInterface
 {
-    public function handle(Throwable $e, ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
+    public function handle(Throwable $e, ServerRequestInterface $request): ResponseInterface
     {
         if ($e instanceof NotFoundException) {
             return response(404)->view('errors.error_404', ['message' => $e->getMessage()]);
