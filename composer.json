@@ -2,7 +2,7 @@
     "name": "horizom/framework",
     "description": "A light PHP Framework",
     "type": "project",
-    "version": "2.1.5",
+    "version": "2.1.6",
     "license": "MIT",
     "keywords": [
         "horizon",
@@ -20,7 +20,7 @@
     }],
     "require": {
         "php": "^7.4 || ^8.0",
-        "horizom/core": "^2.1.2"
+        "horizom/core": "^2.1.10"
     },
     "require-dev": {
         "digitalnature/php-ref": "^1.3"
