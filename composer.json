@@ -20,7 +20,7 @@
     }],
     "require": {
         "php": "^7.4 || ^8.0",
-        "horizom/core": "^2.1.10"
+        "horizom/core": "^2.1.9"
     },
     "require-dev": {
         "digitalnature/php-ref": "^1.3"
