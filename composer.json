@@ -2,7 +2,7 @@
     "name": "horizom/framework",
     "description": "A light PHP Framework",
     "type": "project",
-    "version": "2.1.8",
+    "version": "2.1.9",
     "license": "MIT",
     "keywords": [
         "horizon",
