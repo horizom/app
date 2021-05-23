@@ -1,8 +1,8 @@
 {
     "name": "horizom/framework",
-    "description": "A light PHP Framework",
+    "description": "The lightness PHP framework.",
     "type": "project",
-    "version": "2.1.10",
+    "version": "2.1.11",
     "license": "MIT",
     "keywords": [
         "horizon",
