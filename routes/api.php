@@ -1,7 +1,9 @@
 <?php
 
+use Horizom\Routing\RouteCollector;
+
 /** 
- * @var Horizom\Routing\RouteCollector $router
+ * @var RouteCollector $router
  */
 
 /*
@@ -15,7 +17,7 @@
 |
 */
 
-$router->group(['prefix' => 'api'], function ($router) {
+$router->group(['prefix' => 'api'], function (RouteCollector $router) {
     $router->post('/', 'ApiController@index');
     $router->post('/version', 'ApiController@version');
     $router->post('/status', 'ApiController@status');

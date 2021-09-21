@@ -48,6 +48,7 @@ $app = new \Horizom\App();
 
 $app->configure('app');
 // $app->configure('auth');
+// $app->configure('database');
 
 /*
 |--------------------------------------------------------------------------

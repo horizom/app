@@ -1,7 +1,9 @@
 <?php
 
+use Horizom\Routing\RouteCollector;
+
 /** 
- * @var Horizom\Routing\RouteCollector $router
+ * @var RouteCollector $router
  */
 
 /*

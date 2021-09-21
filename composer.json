@@ -2,7 +2,7 @@
   "name": "horizom/framework",
   "description": "The lightness PHP framework.",
   "type": "project",
-  "version": "2.3.0",
+  "version": "2.4.1",
   "license": "MIT",
   "keywords": [
     "horizon",
@@ -23,10 +23,7 @@
   ],
   "require": {
     "php": "^7.4 || ^8.0",
-    "horizom/core": "^2.3.0"
-  },
-  "require-dev": {
-    "digitalnature/php-ref": "^1.3"
+    "horizom/core": "^2.4.1"
   },
   "autoload": {
     "psr-4": {
