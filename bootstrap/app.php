@@ -1,10 +1,9 @@
 <?php
 
-if (version_compare(PHP_VERSION, '7.4') === -1) {
+if (version_compare(PHP_VERSION, '8.0') === -1) {
     $version = explode('-', PHP_VERSION);
-    echo 'This version of Horizom requires at least PHP 7.4';
-    echo 'You are currently running ' . $version[0] . '. Please update your PHP version.';
-    return;
+    $message =  'This version of BabiPHP requires at least PHP 8.0 but you are currently running PHP ' . $version[0] . '. Please update your PHP version.';
+    throw new \Exception($message, 1);
 }
 
 define('HORIZOM_ROOT', dirname(dirname(__FILE__)));
@@ -33,7 +32,7 @@ require HORIZOM_ROOT . '/vendor/autoload.php';
 |
 */
 
-$app = new \Horizom\App();
+$app = new \Horizom\Core\App();
 
 /*
 |--------------------------------------------------------------------------

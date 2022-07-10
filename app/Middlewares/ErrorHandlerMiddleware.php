@@ -3,12 +3,12 @@
 namespace App\Middlewares;
 
 use Throwable;
+use Horizom\Core\ErrorHandlerInterface;
+use Horizom\Routing\Exception\NotFoundException;
+use Horizom\Routing\Exception\MethodNotAllowedException;
 use Psr\Http\Message\ResponseInterface;
-use Horizom\Exception\NotFoundException;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Horizom\Interfaces\ErrorHandlerInterface;
-use Horizom\Exception\MethodNotAllowedException;
 
 class ErrorHandlerMiddleware implements ErrorHandlerInterface
 {

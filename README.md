@@ -1,9 +1,9 @@
 <p align="center"><img src="https://horizom.github.io/img/horizom-logo-color.svg" width="400"></p>
 
 <p align="center">
-<a href="https://packagist.org/packages/horizom/framework"><img src="https://poser.pugx.org/horizom/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/horizom/framework"><img src="https://poser.pugx.org/horizom/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/horizom/framework"><img src="https://poser.pugx.org/horizom/framework/license.svg" alt="License"></a>
+<a href="https://packagist.org/packages/horizom/app"><img src="https://poser.pugx.org/horizom/app/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/horizom/app"><img src="https://poser.pugx.org/horizom/app/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/horizom/app"><img src="https://poser.pugx.org/horizom/app/license.svg" alt="License"></a>
 </p>
 
 ## About Horizom

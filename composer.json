@@ -1,8 +1,9 @@
 {
-  "name": "horizom/framework",
+  "name": "horizom/app",
   "description": "The lightness PHP framework.",
   "type": "project",
-  "version": "2.4.1",
+  "version": "3.0.0",
+  "homepage": "https://horizom.github.io",
   "license": "MIT",
   "keywords": [
     "horizon",
@@ -10,20 +11,17 @@
     "framework",
     "php"
   ],
-  "homepage": "https://horizom.github.io",
   "authors": [
     {
       "name": "Horizom Team",
       "email": "horizom.team@gmail.com"
-    },
-    {
-      "name": "Codec Solutions",
-      "email": "infos@codecci.com"
     }
   ],
   "require": {
-    "php": "^7.4 || ^8.0",
-    "horizom/core": "^2.4.1"
+    "php": "^8.0",
+    "horizom/core": "^3.0",
+    "horizom/http": "^3.0",
+    "horizom/routing": "^3.0"
   },
   "autoload": {
     "psr-4": {

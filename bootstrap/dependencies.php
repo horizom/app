@@ -1,7 +1,7 @@
 <?php
 
 /** 
- * @var Horizom\App $app
+ * @var Horizom\Core\App $app
  */
 
 /*
