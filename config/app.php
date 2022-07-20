@@ -54,7 +54,7 @@ return [
 
     'app.base_path' => '',
 
-    'app.url' => 'http://localhost:8800',
+    'app.url' => 'http://localhost:8000',
 
     'app.asset_url' => null,
 

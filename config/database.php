@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'database.default' => 'local',
+    'database.default' => 'development',
 
     /*
     |--------------------------------------------------------------------------
@@ -33,7 +33,7 @@ return [
 
     'database.connections' => [
 
-        'local' => [
+        'development' => [
             'driver' => 'mysql',
             'host' => '127.0.0.1',
             'port' => '3306',
@@ -45,7 +45,7 @@ return [
             'prefix' => ''
         ],
 
-        'online' => [
+        'production' => [
             'driver' => 'mysql',
             'host' => '127.0.0.1',
             'port' => '3306',
