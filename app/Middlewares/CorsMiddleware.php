@@ -9,22 +9,14 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class CorsMiddleware implements MiddlewareInterface
 {
-    /**
-     * Process a server request and return a response.
-     */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         $response = $handler->handle($request);
 
-        $maxAge = ' 3600';
-        $origin = ' *';
-        $methods = 'GET, POST, PUT, DELETE, PATCH, OPTIONS';
-        $headers = 'Content-Type, Accept, Access-Control-Allow-Headers, Authorization, X-Requested-With';
-
         return $response
-            ->withHeader('Access-Control-Max-Age', $maxAge)
-            ->withHeader('Access-Control-Allow-Origin', $origin)
-            ->withHeader('Access-Control-Allow-Methods', $methods)
-            ->withHeader('Access-Control-Allow-Headers', $headers);
+            ->withHeader('Access-Control-Max-Age', '3600')
+            ->withHeader('Access-Control-Allow-Origin', '*')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS')
+            ->withHeader('Access-Control-Allow-Headers', 'Content-Type, Accept, Access-Control-Allow-Headers, Authorization, X-Requested-With');
     }
 }

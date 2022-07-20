@@ -7,4 +7,3 @@ use Horizom\Routing\RouteCollector;
  */
 
 $router->get('/', 'MainController@index');
-$router->get('/hello/{name}', 'MainController@hello');

@@ -14,19 +14,40 @@ class ErrorHandlerMiddleware implements ErrorHandlerInterface
 {
     public function handle(Throwable $e, ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        {
-            if ($e instanceof NotFoundException) {
-                return response(404)->view('errors.error_404', ['message' => $e->getMessage()]);
-            }
-    
-            if ($e instanceof MethodNotAllowedException) {
-                return response(405, ['Allow' => $e->getAllowedMethods()])
-                    ->view('errors.error_405', ['message' => $e->getMessage()]);
-            }
-    
-            return response(500)->view('errors.error_500', [
-                'message' => "Internal Server Error"
-            ]);
+        $code = 500;
+        $title = 'Internal Error';
+        $message = 'An internal error has occurred.'; // or $e->getMessage()
+        $headers = [];
+
+        if ($e instanceof NotFoundException) {
+            $code = 404;
+            $title = 'Not Found';
+            $message = 'The requested resource was not found.';
         }
+
+        if ($e instanceof MethodNotAllowedException) {
+            $code = 405;
+            $title = 'Method Not Allowed';
+            $message = 'The method is not allowed for the requested URL.';
+            $headers = ['Allow' => implode(', ', $e->getAllowedMethods())];
+        }
+
+        $data = [
+            'code' => $code,
+            'title' => $title,
+            'message' => $message,
+            'trace' => $e->getTraceAsString(),
+        ];
+
+        $server = collect($request->getServerParams());
+        $paramKey = 'HTTP_X_REQUESTED_WITH';
+
+        if ($server->has($paramKey) && strtolower($server->get($paramKey)) == 'xmlhttprequest') {
+            $response = response($code, $headers)->json($data);
+        } else {
+            $response = response($code, $headers)->view('errors', $data);
+        }
+
+        return $response;
     }
 }
