@@ -2,7 +2,7 @@
   "name": "horizom/app",
   "description": "The lightness PHP framework.",
   "type": "project",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "homepage": "https://horizom.github.io",
   "license": "MIT",
   "keywords": [
@@ -19,7 +19,7 @@
   ],
   "require": {
     "php": "^8.0",
-    "horizom/core": "^3.1",
+    "horizom/core": "^3.2",
     "horizom/http": "^3.1",
     "horizom/routing": "^3.1"
   },
