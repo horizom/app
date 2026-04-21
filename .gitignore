@@ -1,5 +1,4 @@
 .DS_Store
-.phpunit.result.cache
 .env
 .env.backup
 
@@ -7,5 +6,7 @@
 /node_modules
 /vendor
 
+.phpunit.result.cache
 npm-debug.log
 yarn-error.log
+composer.lock
