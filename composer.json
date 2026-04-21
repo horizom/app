@@ -2,7 +2,7 @@
   "name": "horizom/app",
   "description": "The lightness PHP framework.",
   "type": "project",
-  "version": "3.2.0",
+  "version": "5.2.0",
   "homepage": "https://horizom.github.io",
   "license": "MIT",
   "keywords": [
@@ -11,6 +11,10 @@
     "framework",
     "php"
   ],
+  "support": {
+    "issues": "https://github.com/horizom/app/issues",
+    "source": "https://github.com/horizom/app"
+  },
   "authors": [
     {
       "name": "Horizom Team",
@@ -19,9 +23,12 @@
   ],
   "require": {
     "php": "^8.0",
-    "horizom/core": "^3.2",
-    "horizom/http": "^3.1",
-    "horizom/routing": "^3.1"
+    "horizom/core": "^5.2",
+    "horizom/http": "^5.2",
+    "horizom/routing": "^5.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.0"
   },
   "autoload": {
     "psr-4": {
@@ -29,7 +36,29 @@
     }
   },
   "scripts": {
-    "start": "php -S localhost:8000 -t public"
+    "dev": [
+      "Composer\\Config::disableProcessTimeout",
+      "php -S localhost:8000 -t public"
+    ],
+    "serve": [
+      "Composer\\Config::disableProcessTimeout",
+      "php -S localhost:8000 -t public"
+    ],
+    "test": [
+      "php ./vendor/bin/phpunit"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "php-http/discovery": true
+    }
   },
   "minimum-stability": "stable",
   "prefer-stable": true
