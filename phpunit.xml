@@ -13,7 +13,7 @@
 
     <source>
         <include>
-            <directory>src</directory>
+            <directory>app</directory>
         </include>
     </source>
 </phpunit>
