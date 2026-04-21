@@ -7,7 +7,7 @@ use Horizom\Routing\RouteCollector;
  */
 
 $router->group(['prefix' => 'api'], function (RouteCollector $router) {
-    $router->any('/', 'ApiController@index');
-    $router->any('/status', 'ApiController@status');
-    $router->any('/version', 'ApiController@version');
+    $router->get('/', 'ApiController@index');
+    $router->get('/status', 'ApiController@status');
+    $router->get('/version', 'ApiController@version');
 });

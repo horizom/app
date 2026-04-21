@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Controllers;
 
 use Psr\Http\Message\ResponseInterface;
 
-class MainController
+final class MainController
 {
     public function index(): ResponseInterface
     {
